@@ -1,0 +1,35 @@
+3-
+In JavaScript, an execution context is an abstract concept that defines the environment in which JavaScript code is executed. It consists of various components that play crucial roles in managing the execution of code. Understanding execution contexts is essential for comprehending how JavaScript code is processed.
+An execution context consists of three main components:
+1.	Variable Environment: It contains all the declared variables, function declarations, and function arguments within the current scope. This component determines how variables and functions are accessed during code execution.
+2.	Lexical Environment: It is similar to the variable environment, but it also includes the environment record. The environment record is a record of all variables and functions defined within the current scope.
+3.	This Value: It refers to the value of the this keyword within the current execution context. The this value represents the context in which a function is called.
+To visualize the concept of execution contexts, let's look at a diagram:
+    Global Execution Context
+    ______________________
+   |                      |
+   | Variable Environment |
+   |______________________|
+   |                      |
+   | Lexical Environment  |
+   |______________________|
+   |                      |
+   |      This Value      |
+   |______________________|
+
+At the highest level, we have the global execution context, which represents the overall environment in which the JavaScript code is executed. It contains the global variable environment, the global lexical environment, and the global this value.
+Whenever a function is called, a new execution context is created and pushed onto the call stack. This is known as a function execution context. Each function execution context has its own set of variable and lexical environments, as well as a this value specific to that function.
+Here's an example to illustrate execution contexts:
+var x = 10;
+
+function foo(a, b) {
+  var sum = a + b;
+  return sum;
+}
+
+var result = foo(5, 7);
+console.log(result);
+
+In this code snippet, the global execution context is created initially. It contains the variable x, the function foo, and the global this value. When the foo function is called, a new execution context for foo is created and added to the call stack. This execution context has its own variable and lexical environments specific to the foo function.
+Once the execution of foo is completed, its execution context is removed from the call stack, and the global execution context resumes. The result of foo(5, 7) is assigned to the result variable, and the value is logged to the console.
+Understanding execution contexts helps in comprehending scoping, variable access, and the behavior of the this keyword in JavaScript. It plays a vital role in the runtime environment of JavaScript and the order in which code is executed.
