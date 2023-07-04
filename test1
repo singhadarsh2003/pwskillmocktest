@@ -1,0 +1,88 @@
+Answer 1 ->
+
+1-Static: The default position value for an element is static. Elements with a static position are positioned according to the normal document flow. They are not affected by the top, bottom, left, or right properties.
+Example:
+<style>
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+  }
+</style>
+
+<div class="box">
+  This is a static positioned box.
+</div>
+2-Fixed: Elements with a fixed position are positioned relative to the viewport (the browser window) and do not move when the page is scrolled. They stay in a fixed position even if the page is scrolled.
+Example:
+<style>
+  .box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+  }
+</style>
+
+<div class="box">
+  This is a fixed positioned box.
+</div>
+3-Sticky: Elements with a sticky position are positioned based on the user's scroll position. They act as a hybrid of relative and fixed positions. The element is initially positioned according to the normal flow, but as the user scrolls, it "sticks" to the specified position.
+Example:
+<style>
+  .box {
+    position: sticky;
+    top: 50px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+  }
+</style>
+
+<div class="box">
+  This is a sticky positioned box.
+</div>
+4-Relative: Elements with a relative position are positioned relative to their normal position. It allows you to adjust an element's position by specifying the top, bottom, left, or right properties.
+Example:
+<style>
+  .box {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 200px;
+    height: 100px;
+    background-color: green;
+  }
+</style>
+
+<div class="box">
+  This is a relative positioned box.
+</div>
+5.	Absolute: Elements with an absolute position are positioned relative to their nearest positioned ancestor (parent element) or the initial containing block if no positioned ancestor is found. It is taken out of the normal document flow.
+Example:
+<style>
+  .box-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: lightgray;
+  }
+  
+  .box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+  }
+</style>
+
+<div class="box-container">
+  <div class="box">
+    This is an absolutely positioned box inside a container.
+  </div>
+</div>
+
